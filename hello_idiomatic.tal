@@ -8,6 +8,8 @@
 %EMIT { .Console/write DEO } ( character -- )
 ( print a newline )
 %NL { #0a EMIT } ( -- )
+( print a digit )
+%PRINT-DIGIT { #30 ADD EMIT } ( number -- )
 
 ( main program )
 |0100
@@ -17,3 +19,17 @@
 	LIT 'l EMIT
 	LIT 'o EMIT
 	NL
+
+	( uxn tutorial day 1 exercise )
+	LIT 'o
+	LIT 'l
+	LIT 'l
+	LIT 'e
+	LIT 'h
+	EMIT EMIT EMIT EMIT EMIT
+	NL
+
+	( print-digit exercise )
+	#02 PRINT-DIGIT
+	#03 PRINT-DIGIT
+	#09 PRINT-DIGIT
